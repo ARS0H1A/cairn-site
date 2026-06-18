@@ -1,4 +1,3 @@
-
 const DB = {
   get(){
     return JSON.parse(localStorage.getItem("cairn") || "{}");
@@ -24,7 +23,7 @@ function init(){
 
 init();
 
-/* OPEN / CLOSE MODAL */
+/* LOGIN UI */
 function openLogin(){
   document.getElementById("loginModal").classList.remove("hidden");
 }
@@ -54,13 +53,13 @@ function login(){
   showDashboard(user);
 }
 
-/* SHOW DASHBOARD */
+/* DASHBOARD */
 function showDashboard(user){
   document.getElementById("hero").classList.add("hidden");
   document.getElementById("dashboard").classList.remove("hidden");
 
   document.getElementById("userBox").innerHTML =
-    "Welcome " + user.u + " (" + user.role + ")";
+    `Welcome <b>${user.u}</b><br>Role: ${user.role}`;
 }
 
 /* LOGOUT */
