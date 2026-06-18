@@ -1,1 +1,45 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cairn Clean</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<div id="hero" class="page">
+  <h1>Cairn</h1>
+  <p>Clean minimal platform</p>
+
+  <button onclick="openLogin()">Login</button>
+</div>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal hidden">
+  <div class="box">
+    <h2>Login</h2>
+
+    <input id="username" placeholder="username">
+    <input id="password" type="password" placeholder="password">
+
+    <button onclick="login()">Login</button>
+    <button onclick="closeLogin()">Close</button>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="page hidden">
+  <h2>Dashboard</h2>
+
+  <div id="userBox"></div>
+
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
