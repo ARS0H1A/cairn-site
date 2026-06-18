@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<h1 style="color:red;position:fixed;top:0;left:0;z-index:9999;">
-TEST NEW VERSION
-</h1>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,34 +9,63 @@ TEST NEW VERSION
 
 <body>
 
-<!-- HERO -->
-<div id="hero">
-  <h1>Cairn</h1>
-  <p>The quiet modern platform</p>
-
-  <button onclick="openLogin()">Login</button>
+<!-- TOP BAR -->
+<div class="topbar">
+  <span id="userChip"></span>
+  <button onclick="openAuth()">Login</button>
 </div>
 
-<!-- LOGIN MODAL -->
-<div id="loginModal" class="modal hidden">
-  <div class="box">
-    <h2>Login</h2>
+<!-- HOME -->
+<div id="home" class="page">
+  <div class="hero">
+    <div class="badge">v3.0 — Just games <span class="dot"></span></div>
 
-    <input id="username" placeholder="username">
-    <input id="password" type="password" placeholder="password">
+    <h1>The quiet you can <span id="type">trust</span></h1>
 
-    <button onclick="login()">Login</button>
-    <button onclick="closeLogin()">Close</button>
+    <button onclick="setView('dashboard')">Get Started</button>
+    <button onclick="setView('games')">Play Now</button>
   </div>
 </div>
 
 <!-- DASHBOARD -->
-<div id="dashboard" class="hidden">
-  <h1>Dashboard</h1>
+<div id="dashboard" class="page hidden">
+  <h2>Dashboard</h2>
 
-  <div class="card" id="userBox"></div>
+  <div class="card">
+    <h3>Profile</h3>
+    <div id="profile"></div>
+  </div>
 
-  <button onclick="logout()">Logout</button>
+  <div class="card">
+    <h3>Stats</h3>
+    <p>Score: <span id="score">0</span></p>
+    <p>Games: <span id="gamesPlayed">0</span></p>
+  </div>
+</div>
+
+<!-- GAMES -->
+<div id="games" class="page hidden">
+  <h2>Games</h2>
+
+  <h3>Snake</h3>
+  <canvas id="snake" width="400" height="400"></canvas>
+
+  <h3>Memory</h3>
+  <div id="memory"></div>
+</div>
+
+<!-- AUTH -->
+<div id="auth" class="modal hidden">
+  <div class="glass">
+    <h2>Login</h2>
+
+    <input id="u" placeholder="username">
+    <input id="p" type="password" placeholder="password">
+
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Signup</button>
+    <button onclick="closeAuth()">Close</button>
+  </div>
 </div>
 
 <script src="app.js"></script>
