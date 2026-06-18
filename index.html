@@ -1,19 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cairn Clean</title>
+<title>Cairn</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- HERO -->
-<div id="hero" class="page">
+<div id="hero">
   <h1>Cairn</h1>
-  <p>Clean minimal platform</p>
+  <p>The quiet modern platform</p>
 
   <button onclick="openLogin()">Login</button>
 </div>
@@ -32,10 +31,10 @@
 </div>
 
 <!-- DASHBOARD -->
-<div id="dashboard" class="page hidden">
-  <h2>Dashboard</h2>
+<div id="dashboard" class="hidden">
+  <h1>Dashboard</h1>
 
-  <div id="userBox"></div>
+  <div class="card" id="userBox"></div>
 
   <button onclick="logout()">Logout</button>
 </div>
